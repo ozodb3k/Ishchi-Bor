@@ -20,7 +20,7 @@
     font-size: 36px;
     line-height: 44px;
     color: #000000;
-    margin: 60px 0;
+    padding: 60px 0;
 }
 
 .order .message {
@@ -31,6 +31,7 @@
     justify-content: center;
     right: 40px;
     bottom: 40px;
+    z-index: 999;
     width: 60px;
     height: 60px;
     background: var(--primary-color);
@@ -144,20 +145,22 @@ header .navbar {
 header nav .nav_tools {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 header nav .nav_tools .nav_profile,
 header nav .nav_tools .nav_call,
-header nav .nav_tools .nav_lang {
+header nav .nav_lang {
     margin: 0 20px;
 }
 
-header nav .nav_tools .nav_lang {
+header nav .nav_lang {
     display: flex;
     align-items: center;
 }
 
-header nav .nav_tools .nav_lang span {
+
+header nav .nav_lang span {
     display: block;
     width: 1px;
     height: 16px;
@@ -165,10 +168,14 @@ header nav .nav_tools .nav_lang span {
     background: #3F3F3F;
 }
 
-header nav .nav_tools .nav_lang a {
+header nav .nav_lang a {
     color: #3F3F3F;
     font-size: 16px;
     line-height: 16px;
+}
+
+header nav .nav_lang.mobile {
+    display: none;
 }
 
 header nav .nav_tools .nav_call .call_number {
@@ -358,31 +365,6 @@ header .banner button {
     top: 15%;
 }
 
-.steeps_main .steep_item .line {
-    position: relative;
-    z-index: 99;
-}
-
-.steeps_main .steep_item .line::after {
-    content: "";
-    position: absolute;
-    width: 420px;
-    left: -83%;
-    height: 2px;
-    top: 50%;
-    background: linear-gradient(90deg, rgba(239, 118, 13, 0) 2%, rgba(239, 118, 13, 1) 2%, rgba(239, 118, 13, 1) 42%, rgba(239, 118, 13, 0) 42%, rgba(239, 118, 13, 0) 53%, rgba(239, 118, 13, 1) 53%, rgba(239, 118, 13, 1) 98%, rgba(239, 118, 13, 0) 98%);
-}
-
-.steeps_main .steep_item .line::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 2px;
-    top: 50%;
-    left: 54%;
-    background: linear-gradient(90deg, rgba(200, 200, 200, 0) 3%, rgba(200, 200, 200, 1) 3%, rgba(200, 200, 200, 1) 47%, rgba(200, 200, 200, 0) 47%, rgba(200, 200, 200, 0) 56%, rgba(200, 200, 200, 1) 60%, rgba(200, 200, 200, 1) 97%, rgba(200, 200, 200, 0) 98%);
-}
-
 .steeps_main .steep_item {
     padding: 0 60px;
     text-align: center;
@@ -402,6 +384,141 @@ header .banner button {
     line-height: 17px;
     text-align: center;
     color: #3F3F3F;
+}
+
+/* ================== top_masters start */
+
+.top_masters {
+    padding-bottom: 60px;
+    background: #f0f6fa;
+}
+
+.masters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.masters .master_item {
+    display: flex;
+    width: 49%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.masters .master_item .master_info .master_info_img {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 160px;
+    height: 160px;
+}
+
+.masters .master_item .master_info .master_info_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.masters .master_item .master_info .master_info_rate {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.masters .master_item .master_info i {
+    width: 30px;
+    text-align: center;
+}
+
+.masters .master_item .master_about {
+    padding: 0 0 20px 20px;
+}
+
+.masters .master_item .master_about .state p {
+    font-size: 12px;
+    margin: 8px 0;
+    color: #7b92a4;
+}
+
+.masters .master_item .master_about .masterinfo {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.masters .master_item .master_about .works {
+    display: flex;
+    align-items: center;
+}
+
+.masters .master_item .master_about .works .work_item {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    margin-right: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.masters .master_item .master_about .prices .price_list {
+    padding: 10px 0;
+}
+
+.masters .master_item .master_about .prices .price_list .price_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    color: var(--primary-color);
+}
+
+.masters .master_item .master_about .contact {
+    display: flex;
+    align-items: center;
+}
+
+.masters .master_item .master_about .contact .btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #f0f6fa;
+}
+
+.masters .master_item .master_about .contact .btn:hover {
+    background: #cfd9e0;
+}
+
+.masters .master_item .master_about .contact .chat {
+    margin: 0 8px;
+}
+
+.masters .master_item .master_about .works .work_item img {
+    width: 100%;
+    height: 100%;
+}
+
+.masters .master_item .master_about .master_about_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.masters .master_item .master_about .master_about_title h2 {
+    transition: 0.3s;
+    color: var(--primary-color);
+    font-size: 28px;
+}
+
+.masters .master_item .master_about .master_about_title h2:hover {
+    color: var(--orange-color);
+}
+
+.masters .master_item .master_about .master_about_title button {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
 }
 
 /* ================== about start */
@@ -492,6 +609,28 @@ footer .footer_main h4 {
 
 /* X-Large ≥1200px */
 @media (max-width: 1199px) {
+    .masters .master_item {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .masters .master_item .master_info {
+        width: 100%;
+    }
+
+    .masters .master_item .master_about {
+        padding: 20px 0 0 0;
+        width: 100%;
+    }
+
+    .masters .master_item .master_about .master_about_title h2 {
+        font-size: 20px;
+    }
+
+    .masters .master_item .master_about .prices .price_list .price_item {
+        font-size: 12px;
+    }
+
     .container {
         width: 960px;
     }
@@ -499,6 +638,19 @@ footer .footer_main h4 {
 
 /* Large ≥992px */
 @media (max-width: 991px) {
+    header nav .nav_tools .nav_lang.mobile {
+        display: none;
+    }
+
+    header .banner h1 {
+        font-size: 30px;
+        width: 60%;
+    }
+
+    header .banner p {
+        font-size: 16px;
+    }
+
     .container {
         width: 720px;
     }
@@ -506,6 +658,38 @@ footer .footer_main h4 {
 
 /* Medium ≥768px */
 @media (max-width: 767px) {
+
+    header nav .nav_tools .nav_profile,
+    header nav .nav_tools .nav_call,
+    header nav .nav_lang {
+        margin: 0;
+    }
+
+    header nav .logo img {
+        width: 140px;
+    }
+
+    header nav .nav_lang.mobile {
+        display: flex;
+    }
+
+    header nav .nav_tools .nav_lang.desktop {
+        display: none;
+    }
+
+    header nav .nav_tools {
+        width: 100%;
+    }
+
+    header .banner h1 {
+        font-size: 30px;
+        width: 70%;
+    }
+
+    header .banner p {
+        font-size: 14px;
+    }
+
     .container {
         width: 540px;
     }
@@ -517,6 +701,72 @@ footer .footer_main h4 {
 
 /* Small ≥576px */
 @media (max-width: 575px) {
+    .order .message_modal {
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 96%;
+    }
+
+    .category .category_items .category_item {
+        width: 100%;
+        height: 400px;
+        margin-right: 0;
+    }
+
+    .steeps_main .call-center,
+    .steeps_main .worker {
+        display: none;
+    }
+
+    .steeps_main {
+        flex-wrap: wrap;
+    }
+
+    .steeps_main .steep_item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about .about_main {
+        flex-wrap: wrap;
+    }
+
+    .about .about_main .about_info {
+        width: 100%;
+    }
+
+    .about .about_main .about_items {
+        padding-top: 20px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .about .about_main .about_info {
+        padding-right: 0;
+    }
+
+    footer .footer_main h4 {
+        font-size: 12px;
+    }
+
+    .section_title {
+        font-size: 24px;
+        width: 80%;
+        line-height: 28px;
+    }
+
+    header .banner h1 {
+        font-size: 24px;
+        width: 90%;
+    }
+
+    header .banner p {
+        font-size: 14px;
+    }
+
     .container {
         width: 90%;
     }

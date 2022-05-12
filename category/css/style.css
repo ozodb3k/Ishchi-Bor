@@ -1,0 +1,380 @@
+:root {
+  --primary-color: rgba(44, 35, 125, 1);
+  --orange-color: #ef760d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  padding-top: 100px;
+}
+
+.container {
+  margin: auto;
+}
+
+.btn {
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #1c1c1c;
+  border: none;
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: #ebebeb;
+}
+
+/* ================== nav start */
+
+nav {
+  box-shadow: 0 0 6px 1px #d5d5d5;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: #fff;
+}
+
+nav .nav_top {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav_top .province {
+  margin-left: auto;
+}
+
+nav .nav_top .specialist {
+  margin: 0 12px;
+}
+
+nav .nav_top nav .nav_top select {
+  padding: 12px;
+}
+
+section {
+  position: relative;
+}
+
+section .left_menu {
+  width: 20%;
+}
+
+section .left_menu .menu_list .menu_list_item.active {
+  background-color: #ebebeb;
+}
+
+section .left_menu .menu_list .menu_list_item {
+  display: flex;
+  align-items: center;
+}
+
+section .left_menu .menu_list .menu_list_item span {
+  display: block;
+  margin-left: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+section {
+  height: 100%;
+}
+
+section .container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  background: #fff;
+}
+
+section .left_menu {
+  position: fixed;
+  width: 300px;
+}
+
+section .masters {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 300px;
+}
+
+.masters .master_item {
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 4px 4px #eeeeee;
+  border-radius: 10px;
+}
+
+.masters .master_item .master_info .master_info_img {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 160px;
+  height: 160px;
+}
+
+.masters .master_item .master_info .master_info_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.masters .master_item .master_info .master_info_rate {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.masters .master_item .master_info i {
+  width: 30px;
+  text-align: center;
+}
+
+.masters .master_item .master_about {
+  padding: 0 0 20px 20px;
+}
+
+.masters .master_item .master_about .state p {
+  font-size: 12px;
+  margin: 8px 0;
+  color: #7b92a4;
+}
+
+.masters .master_item .master_about .masterinfo {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.masters .master_item .master_about .works {
+  display: flex;
+  align-items: center;
+}
+
+.masters .master_item .master_about .works .work_item {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.masters .master_item .master_about .prices .price_list {
+  padding: 10px 0;
+}
+
+.masters .master_item .master_about .prices .price_list .price_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  color: var(--primary-color);
+}
+
+.masters .master_item .master_about .contact {
+  display: flex;
+  align-items: center;
+}
+
+.masters .master_item .master_about .contact .btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #f0f6fa;
+}
+
+.masters .master_item .master_about .contact .btn:hover {
+  background: #cfd9e0;
+}
+
+.masters .master_item .master_about .contact .chat {
+  margin: 0 8px;
+}
+
+.masters .master_item .master_about .works .work_item img {
+  width: 100%;
+  height: 100%;
+}
+
+.masters .master_item .master_about .master_about_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.masters .master_item .master_about .master_about_title h2 {
+  transition: 0.3s;
+  color: var(--primary-color);
+  font-size: 28px;
+}
+
+.masters .master_item .master_about .master_about_title h2:hover {
+  color: var(--orange-color);
+}
+
+.masters .master_item .master_about .master_about_title button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+/* XX-Large в‰Ґ1400px */
+@media (min-width: 1399px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+/* XX-Large в‰Ґ1400px */
+@media (max-width: 1399px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* X-Large в‰Ґ1200px */
+@media (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* Large в‰Ґ992px */
+@media (max-width: 991px) {
+  section .left_menu {
+    width: 200px;
+  }
+
+  section .masters {
+    margin-left: 200px;
+  }
+
+  .masters .master_item .master_info .master_info_img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .masters .master_item .master_about .master_about_title h2 {
+    font-size: 22px;
+  }
+
+  .masters .master_item .master_about .masterinfo {
+    font-size: 14px;
+  }
+
+  .masters .master_item .master_about .works .work_item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .masters .master_item .master_about .contact .btn {
+    font-size: 10px;
+  }
+
+  .container {
+    width: 720px;
+  }
+}
+
+/* Medium в‰Ґ768px */
+@media (max-width: 767px) {
+  section .left_menu {
+    width: 100%;
+    position: static;
+  }
+
+  section .masters {
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  section .masters .master_item {
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .container {
+    width: 540px;
+  }
+
+  .message {
+    display: none;
+  }
+}
+
+/* Small в‰Ґ576px */
+@media (max-width: 575px) {
+  .masters .master_item {
+    flex-wrap: wrap;
+  }
+
+  .masters .master_item .master_info {
+    display: flex;
+    width: 100%;
+  }
+
+  .masters .master_item .master_info .rating {
+    padding-left: 10px;
+  }
+
+  .masters .master_item .master_about {
+    width: 100%;
+    padding: 0;
+  }
+
+  .masters .master_item .master_about .prices .price_list .price_item {
+    font-size: 14px;
+  }
+
+  nav .nav_top {
+    justify-content: space-between;
+  }
+
+  section .left_menu select {
+    border-radius: 0;
+    border-bottom: 1px solid #afafaf;
+    width: 100%;
+  }
+
+  section .left_menu select:hover {
+    background: none;
+  }
+
+  section .menu_list {
+    margin-top: 20px;
+  }
+
+  nav .nav_top .province,
+  nav .nav_top .specialist {
+    display: none;
+  }
+
+  nav .nav_top .logo img {
+    width: 120px;
+    padding: 4px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
